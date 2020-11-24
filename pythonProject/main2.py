@@ -35,7 +35,7 @@ print(my_list[::2])
 print(my_list[3::-1])
 
 #tuplu
-my_tuple=(1,2,3)
+my_tuple=(1,2,3,1)
 print(my_tuple)
 
 my_dict = {

@@ -13,6 +13,7 @@ print(my_function_ex1())
 print(my_function_ex1(2,4,'ddfds',param_1=2))
 
 print("debug")
+
 #exercitiul2
 def my_function(n):
     if n == 0:

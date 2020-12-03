@@ -15,18 +15,19 @@ print(my_function_ex1(2,4,'ddfds',param_1=2))
 print("debug")
 #exercitiul2
 
-def test(n):
+def test_function(n):
     if not n:
         return 0, 0, 0
     else:
         if n % 2 == 0:
-            totalSum, evenSum, oddSum = n, n, 0
+            total_sum, even_sum, odd_sum = n, n, 0
         else:
-            totalSum, evenSum, oddSum = n, 0, n
-    return totalSum + test(n-1)[0], evenSum + test(n-1)[1], oddSum + test(n-1)[2]
+            total_sum, even_sum, odd_sum = n, 0, n
+    return total_sum + test_function(n-1)[0], even_sum + test_function(n-1)[1], odd_sum + test_function(n-1)[2]
 
 print("ex 2")
-print(test(3))
+print(test_function(3))
+
 
 ''' 
 def my_function(n):

@@ -14,22 +14,27 @@ print(my_function_ex1(2,4,'ddfds',param_1=2))
 
 print("debug")
 #exercitiul2
-def my_function(n):
 
+def my_function(n):
+    suma = 0
+    sum_pare = 0
+    sum_impare = 0
+    
     if n == 0:
         return 0
 
     if n%2 == 0:
-      return  n + my_function(n-2)
+      sum_pare += n + my_function(n-2)
     else:
-      return my_function(n-1)
+      sum_pare += my_function(n-1)
 
     if n % 2 == 1:
-      return my_function(n - 1)
+      sum_impare += my_function(n - 1)
     else:
-      return my_function(n - 1)
+      sum_impare += my_function(n - 1)
 
-    return n+ my_function(n-1)
+    suma = n+ my_function(n-1)
+    return suma, sum_pare, sum_impare
 
 
 ''' 

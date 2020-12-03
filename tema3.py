@@ -3,7 +3,7 @@
 def my_function_ex1(*args, **kwargs):
     sum = 0
     for i in args:
-        if type(i) is int:
+        if type(i) is int or type(i) is float:
           sum += i
     return sum
 
@@ -13,13 +13,26 @@ print(my_function_ex1())
 print(my_function_ex1(2,4,'ddfds',param_1=2))
 
 print("debug")
-
 #exercitiul2
 def my_function(n):
+
     if n == 0:
         return 0
+
+    if n%2 == 0:
+      return  n + my_function(n-2)
+    else:
+      return my_function(n-1)
+
+    if n % 2 == 1:
+      return my_function(n - 1)
+    else:
+      return my_function(n - 1)
+
     return n+ my_function(n-1)
 
+
+''' 
 def my_function_par(n):
     if n == 0:
         return 0
@@ -37,22 +50,21 @@ def my_function_impar(n):
     else:
       return my_function_impar(n-1)
 
-
+'''
 print(my_function(5))
-print(my_function_par(6))
-print(my_function_par(3))
-print(my_function_impar(6))
-print(my_function_impar(3))
+print(my_function(6))
+print(my_function(3))
+print("debug 2")
 
 
 
 #exercitiul3
-def my_function_tastatura(n):
-    input(n)
-    if n == int(n):
+def my_function_tastatura():
+    n = input()
+    try:
+        n = int(n)
         return n
-    else:
+    except:
         return 0
 
-my_function_tastatura(400)
-my_function_tastatura(4.7)
+print(my_function_tastatura())

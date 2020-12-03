@@ -15,11 +15,25 @@ print(my_function_ex1(2,4,'ddfds',param_1=2))
 print("debug")
 #exercitiul2
 
+def test(n):
+    if not n:
+        return 0, 0, 0
+    else:
+        if n % 2 == 0:
+            totalSum, evenSum, oddSum = n, n, 0
+        else:
+            totalSum, evenSum, oddSum = n, 0, n
+    return totalSum + test(n-1)[0], evenSum + test(n-1)[1], oddSum + test(n-1)[2]
+
+print("ex 2")
+print(test(3))
+
+''' 
 def my_function(n):
     suma = 0
     sum_pare = 0
     sum_impare = 0
-    
+
     if n == 0:
         return 0
 
@@ -37,7 +51,6 @@ def my_function(n):
     return suma, sum_pare, sum_impare
 
 
-''' 
 def my_function_par(n):
     if n == 0:
         return 0
@@ -55,12 +68,12 @@ def my_function_impar(n):
     else:
       return my_function_impar(n-1)
 
-'''
 print(my_function(5))
 print(my_function(6))
 print(my_function(3))
 print("debug 2")
 
+'''
 
 
 #exercitiul3

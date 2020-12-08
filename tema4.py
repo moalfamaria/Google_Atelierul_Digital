@@ -27,7 +27,6 @@ for row in rows:
     if (data and data[0] == 'Genus:'):
         print(data[0] + " " + data[1])
 
-
 with open("output1.html", "w", encoding='utf-8') as file:
     file.write(str(row.find_all('td')))
 
